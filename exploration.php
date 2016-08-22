@@ -1,7 +1,8 @@
 <?php
+	include 'lib/site.php';
 	include 'app/inc/head.php';
 	include 'app/inc/left-sidebar.php';
-	include 'lib/site.php';
+
 	$id = $_GET['id'];
 	$exploration = $explorations->get($id);
 	$stops = $exploration->getStops();

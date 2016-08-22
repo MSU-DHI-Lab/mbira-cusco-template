@@ -1,7 +1,8 @@
 <?php
+	require_once "lib/site.php";
 	include 'app/inc/head.php';
 	include 'app/inc/left-sidebar.php';
-	require "lib/site.php";
+
 
 	$count = $explorations->getCount();
 	$titles = $explorations->getTitles();
