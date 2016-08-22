@@ -38,3 +38,9 @@ latlngs.push(marker4.getLatLng());
 // sets line connecting all markers
 
 var polyline = L.polyline(latlngs, {color: '#263238'}).addTo(explorationMap);
+
+explorationMap.on('popupopen', function(centerMarker) {
+    var cM = explorationMap.project(centerMarker.popup._latlng);
+    cM.y -= centerMarker.popup._container.clientHeight/2
+    explorationMap.setView(explorationMap.unproject(cM));
+});

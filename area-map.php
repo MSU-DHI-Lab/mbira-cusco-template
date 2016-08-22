@@ -72,6 +72,14 @@ var m1Txt = '<h2>$title</h2> <p>$des</p> <a href=\"area.php?id=$id\"><div class=
 
 area.bindPopup(m1Txt);
 
+areaMap.on('popupopen', function(centerMarker) {
+    var cM = areaMap.project(centerMarker.popup._latlng);
+    cM.y -= centerMarker.popup._container.clientHeight/2
+    areaMap.setView(areaMap.unproject(cM));
+});
+
+areaMap.fitBounds(area.getBounds());
+
 </script>";?>
 
 <script>

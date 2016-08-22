@@ -138,6 +138,12 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
     accessToken: 'pk.eyJ1IjoidG9tbWljY2hpIiwiYSI6IjQ2MDIxMWU1MTI4MjQxZWJiYjUyYmIyNTlhMWQzYjgyIn0.yTGdQTIKSmk97JN6QC-H0A'
 }).addTo(exhibitMap);
 
+exhibitMap.on('popupopen', function(centerMarker) {
+    var cM = exhibitMap.project(centerMarker.popup._latlng);
+    cM.y -= centerMarker.popup._container.clientHeight/2
+    exhibitMap.setView(exhibitMap.unproject(cM));
+});
+
 ".$locationScript.$areaScript. "
 
 </script>";

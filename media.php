@@ -12,7 +12,6 @@
 		header('Location: ./index.php'); 		///< go to homepage if the id is unknown
 	}
 	$count = count($media);
-	var_dump($media[0])
 ?>
 
 <div class="main">

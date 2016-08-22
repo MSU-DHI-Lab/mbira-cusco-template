@@ -68,6 +68,12 @@ var m1Txt = '<h2>$title</h2> <p>$des</p> <a href=\"location.php?id=$id\"><div cl
 
 marker1.bindPopup(m1Txt);
 
+locationMap.on('popupopen', function(centerMarker) {
+    var cM = locationMap.project(centerMarker.popup._latlng);
+    cM.y -= centerMarker.popup._container.clientHeight/2
+    locationMap.setView(locationMap.unproject(cM),16, {animate: true});
+});
+
 </script>";?>
 
 <script>
