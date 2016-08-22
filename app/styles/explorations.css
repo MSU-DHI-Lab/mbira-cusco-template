@@ -1,0 +1,102 @@
+/* sets single exploration preview image */
+.exploration-img {
+	position: relative;
+	float: left;
+	width: 100%;
+
+	/* set background image here */
+	/* will need to create multiple instances of this for different explorations */
+
+	/*background-image: url('https://images.unsplash.com/photo-1433959352364-9314c5b6eb0b?q=80&fm=jpg&s=e3bfea02f099f5b8a177fa03f01fb46e');
+
+	/* center image in div */
+
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin-bottom: 24px;
+	box-shadow: inset 0 -175px 200px -150px #000;
+}
+
+.exploration-title {
+	position: absolute;
+	bottom: 0;
+	word-wrap: break-word;
+	margin: auto;
+}
+
+.exploration-title h1 {
+	height: 100%;
+	text-transform: uppercase;
+	padding: 0;
+	margin-bottom: 24px;
+}
+
+.exploration-description h2 {
+	text-transform: uppercase;
+}
+
+.exploration-description ol {
+	counter-reset: item;
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.exploration-description ol li {
+	margin-bottom: 24px;
+	display: block;
+	padding: 0;
+}
+
+.exploration-description ol li:before {
+	content: counter(item) '';
+	counter-increment: item;
+	padding-right: 48px;
+}
+
+/* formatting for map on exhibit map page */
+
+#exploration-map {
+	float: left;
+	width: 100%;
+	height: 100vh;
+}
+
+/* sets single exhibit preview image container height, depending on screen-width/device */
+
+@media only screen and (max-width: 640px) {
+	.exploration-img {
+		min-height: 33vh;
+	}
+
+	.exploration-title {
+		width: 90%;
+	}
+}
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+	.exploration-img {
+		min-height: 33vh;
+	}
+
+	.exploration-title {
+		width: 80%;
+	}
+}
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+	.exploration-img {
+		min-height: 45vh;
+	}
+
+	.exploration-title {
+		width: 75%;
+	}
+}
+@media only screen and (min-width: 1441px) {
+	.exploration-img {
+		min-height: 45vh;
+	}
+
+	.exploration-title {
+		width: 75%;
+	}
+}

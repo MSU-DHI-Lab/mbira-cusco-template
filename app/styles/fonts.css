@@ -1,0 +1,53 @@
+/* sets fonts for mbira */
+/* font files found in .fonts */
+
+@font-face {
+	font-family: 'Montserrat Light';
+	src: url('fonts/Montserrat-Light.ttf') format('truetype'),
+		 url('fonts/Montserrat-Light.svg') format('svg'),
+		 url('fonts/Montserrat-Light.eot') format('embedded-opentype'),
+		 url('fonts/Montserrat-Light.eot?#iefix') format('embedded-opentype'),
+		 url('fonts/Montserrat-Light.woff') format('woff'),
+		 url('fonts/Montserrat-Light.woff2') format('woff2');
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'Montserrat Regular';
+	src: url('fonts/Montserrat-Regular.ttf') format('truetype'),
+		 url('fonts/Montserrat-Regular.svg') format('svg'),
+		 url('fonts/Montserrat-Regular.eot') format('embedded-opentype'),
+		 url('fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+		 url('fonts/Montserrat-Regular.woff') format('woff');
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'Montserrat Bold';
+	src: url('fonts/Montserrat-Bold.ttf') format('truetype'),
+		 url('fonts/Montserrat-Bold.svg') format('svg'),
+		 url('fonts/Montserrat-Bold.eot') format('embedded-opentype'),
+		 url('fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
+		 url('fonts/Montserrat-Bold.woff') format('woff');
+	font-style: normal;
+	font-weight: bold;
+}
+
+
+body {
+	font-family: 'Montserrat Regular', sans-serif;
+}
+
+p {
+	font-family: 'Montserrat Light', sans-serif;
+}
+
+b, strong {
+	font-family: 'Montserrat Bold', sans-serif;
+}
+
+h5, h3 {
+	font-weight: 400;
+}

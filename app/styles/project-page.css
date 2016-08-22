@@ -1,0 +1,154 @@
+/* sets single project preview image */
+.project-img {
+	position: relative;
+	float: left;
+	width: 100%;
+
+	/* set background image here */
+
+	/* background-image: url('https://images.unsplash.com/photo-1433256392503-913cee5877e3?q=80&fm=jpg&s=2d9815a1ede9d4a235142ca07f04d058');*/
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+	/* center image in div */
+
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin-bottom: 35px;
+	box-shadow: inset 0 -175px 200px -150px #000;
+}
+
+.project-title-nav {
+	font-family: 'Montserrat Regular';
+}
+
+.project-title {
+	position: absolute;
+	bottom: 0;
+	word-wrap: break-word;
+	margin: auto;
+}
+
+.project-title h1 {
+	height: 100%;
+	text-transform: uppercase;
+	padding: 0;
+	margin-bottom: 24px;
+}
+
+.org-name {
+	margin-top: 20px;
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+.tag-line {
+}
+
+.project-description p {
+	font-size: 14px;
+	line-height: 1.7;
+}
+
+/* sets project preview image container height, depending on screen-width/device */
+
+@media only screen and (max-width: 640px) {
+	.project-img {
+		min-height: 33vh;
+	}
+
+	.project-title {
+		width: 80%;
+	}
+
+	/* hides nav on smaller screen-width/devices */
+
+	.project-home-nav {
+		display: none;
+	}
+}
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+	.project-img {
+		min-height: 33vh;
+	}
+
+	.project-title {
+		width: 80%;
+	}
+
+	/* hides nav on smaller screen-width/devices */
+
+	.project-home-nav {
+		display: none;
+	}
+}
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+	.project-home {
+		width: 100%;
+	}
+
+	.project-img {
+		min-height: 45vh;
+	}
+
+	.project-title {
+		width: 75%;
+	}
+
+	/* shows nav on larger screen-width/devices */
+
+	.project-home-nav {
+		float: left;
+		width: 50%;
+		margin-top: 24px;
+	}
+
+	.project-home-nav .project-nav {
+		display: inline;
+	}
+
+	.project-home-nav .project-nav .nav-item {
+		width: 75%;
+		margin: 0 auto 24px auto;
+	}
+
+	.project-home .project-info {
+		float: left;
+		width: 45%;
+		margin-left: -24px;
+	}
+}
+@media only screen and (min-width: 1441px) {
+	.project-img {
+		min-height: 45vh;
+	}
+
+	.project-title {
+		width: 75%;
+	}
+
+	/* shows nav on larger screen-width/devices */
+
+	.project-home-nav {
+		float: left;
+		width: 50%;
+		margin-top: 24px;
+	}
+
+	.project-home-nav .project-nav {
+		display: inline;
+	}
+
+	.project-home-nav .project-nav .nav-item {
+		width: 75%;
+		margin: 0 auto 24px auto;
+	}
+
+	.project-home .project-info {
+		float: left;
+		width: 45%;
+		margin-left: -24px;
+	}
+}

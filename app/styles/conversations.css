@@ -1,0 +1,184 @@
+/* this container is necessary for project to function properly */
+.convo-contents {
+	float: left;
+	width: 100%;
+}
+
+/* formatting for single conversation */
+.single-convo {
+	position: relative;
+	width: 100%;
+	background: #455A64;
+	padding: 12px 0;
+	border-bottom: 1px solid #263238;
+	border-left: 1px solid #263238;
+}
+
+/* formatting for the main conversation and replies on single conversation page */
+.main-convo, .reply {
+	position: relative;
+	width: 100%;
+	background: #263238;
+	padding: 12px 0;
+	border-bottom: 1px solid #263238;
+	border-left: 1px solid #263238;
+}
+
+.reply {
+	background: #455A64;
+}
+
+/* formatting for user badges */
+.badges {
+	float: right;
+	display: inline-block;
+}
+
+.badges .icon {
+	margin-left: 6px;
+}
+
+/* formatting for elements in each conversation container */
+.single-convo .since-post {
+	font-size: 80%;
+	margin-top: -12px;
+	margin-bottom: 24px;
+}
+
+.single-convo .post-preview {
+	width: 100%;
+}
+
+.single-convo .reply-count {
+	font-size: 80%;
+	margin-top: 36px;
+}
+
+.single-convo .view-convo-btn {
+	float: right;
+	margin-top: -36px;
+}
+
+.view-convo-btn a {
+	color: #fff;
+}
+
+.view-convo-btn p {
+	float: left;
+	display: inline;
+	margin-top: 3px;
+	margin-right: 12px;
+	text-transform: uppercase;
+}
+
+.view-convo-btn span {
+	float: left;
+	display: inline;
+}
+
+/* new conversation overlay */
+#new-convo {
+	z-index: 10;
+	float: left;
+	position: absolute;
+	top: 60px;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(38, 50, 56, .95);
+	-webkit-transition: .25s;
+	transition: .25s;
+}
+
+#new-convo.hide {
+	display: none;
+}
+
+#new-convo.show {
+	display: inline;
+}
+
+#new-convo .icon.close {
+	margin-top: 16px;
+	width: 18px;
+	height: 18px;
+	cursor: pointer;
+}
+
+#new-convo .expert-sign-in {
+	float: right;
+	text-transform: uppercase;
+}
+
+#new-convo .expert-sign-in a {
+	color: #fff;
+	text-decoration: none;
+}
+
+#new-convo .contents input[type=text], textarea {
+	float: left;
+	width: 100%;
+	margin-top: 24px;
+	background: transparent;
+	color: #fff;
+	outline: none;
+	border: 0;
+}
+
+#new-convo .contents input[type=submit] {
+	float: left;
+	width: auto;
+	padding: 8px 16px;
+	margin-top: 24px;
+	background: transparent;
+	color: #fff;
+	outline: none;
+	border: 1px solid #fff;
+}
+
+#new-convo hr {
+	position: relative;
+	left: -10%;
+	float: left;
+	width: 110vw;
+	border: 1px solid #fff;
+}
+
+.convo-textbox {
+	margin-top: 32px;
+}
+
+#noconvo {
+	margin: 0px 4.24em;
+}
+
+
+@media only screen and (max-width: 640px) {
+	
+	/* these elements need to be smaller on small mobile devices */
+	
+	.convo-page-title {
+		font-size: 150%;
+	}
+	
+	.view-convo-btn p {
+		font-size: 75%;
+		margin-top: 4px;
+		margin-right: 4px;
+	}
+	
+	.badges .icon {
+		margin-top: 6px;
+		width: 16px;
+		height: 16px;
+	}
+}
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+	
+}
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+
+}
+@media only screen and (min-width: 1441px) {
+	
+}

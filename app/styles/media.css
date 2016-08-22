@@ -1,0 +1,38 @@
+/* need in order for media nav links at bottom of page to work properly */
+.tiles, .convo-nav {
+	float: left;
+	width: 100%;
+}
+
+/* allows user to contribute media */
+
+.add-media {
+	background: #28BDFF;
+	position: relative;
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.add-media p {
+margin-top: -50px;
+}
+
+.add-media .add {
+	width: 25%;
+	height: 25%;
+	margin-top: 30%;
+}
+
+@media only screen and (max-width: 640px)
+
+}
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+
+}
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+
+}
+@media only screen and (min-width: 1441px) {
+
+}

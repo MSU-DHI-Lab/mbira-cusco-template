@@ -1,0 +1,30 @@
+/* allows for return to single location and exploration stops to be in same container */
+.dig-deeper-header {
+	float: left;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 64px;
+	background: rgba(38, 50, 56, .75);
+}
+
+.dig-deeper-header #location-links .exploration-stop {
+	float: right;
+	margin-top: -60px;
+}
+
+.dig-deeper-header #location-links .exploration-stop p {
+	float: left;
+	color: #28BDFF;
+	margin-right: 16px;
+	text-align: center;
+	font-size: 80%;
+	line-height: normal;
+}
+
+.dig-deeper-header #location-links .exploration {
+	float: left;
+	position: relative;
+	top: 16px;
+}

@@ -1,0 +1,47 @@
+/* sets color of text in maps */
+.map {
+	color: #36464E;
+}
+
+/* width of leaflet popups */
+.map .leaflet-popup-content {
+	width: 250px;
+}
+
+/* formatting for view-location button in each popup */
+.map .view-location {
+	background: #28BDFF;
+	border-bottom-left-radius: 12px;
+	border-bottom-right-radius: 12px;
+	margin-bottom: -14px;
+	margin-left: -20px;
+	margin-right: -20px;
+	padding: 13px 19px;
+	height: 26px;
+}
+
+.map .view-location p {
+	display: inline-block;
+	color: #fff;
+	margin-top: 4px;
+	font-size: 120%;
+	text-transform: uppercase;
+}
+
+.map .view-location .icon {
+	float: right;
+	display: inline-block;
+	background: #fff;
+}
+
+.map .leaflet-popup-tip {
+	background: #28BDFF;
+}
+
+.map .leaflet-top .leaflet-control {
+	margin-top: 75px;
+}
+
+.map .leaflet-top {
+	z-index: 98;
+}

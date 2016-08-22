@@ -1,0 +1,96 @@
+
+/************************************
+ LOGIN + SIGN UP
+*************************************/
+h1#loginHeader, h1#signupHeader {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+form#loginForm, form#signupForm {
+    margin: 6% 20px 15% 20px;
+    text-align: center;
+}
+
+/*** Inputs ***/
+form#loginForm input, form#signupForm input {
+    width: 40%;
+    padding: 15px;
+    margin-bottom: 25px;
+
+    background: transparent;
+    border: 1px solid #fff;
+    outline: none;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Submit Buttons */
+form#loginForm input[type=submit], form#signupForm input[type=submit] {
+    margin-bottom: 45px;
+    color: #fff;
+    font-size: 18px;
+    background: #29B6F6;
+    border-color: #29B6F6;
+    text-transform: uppercase;
+}
+
+/* Inputs on Focus */
+form#loginForm input:focus, form#signupForm input:focus {
+    border-color: #29B6F6;
+}
+
+/*** Text Under Button ***/
+form#loginForm p, form#signupForm p {
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+/* "Create Account" and "Forgot Password?" Links */
+form#loginForm p a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/*** Facebook, Twitter, Google+ Icons ***/
+form#signupForm p.signUpIcon {
+    display: inline-block;
+    margin: 0 22px;
+}
+
+form#signupForm p.signUpIcon a img {
+    width: 25px;
+    height: 25px;
+    padding: 10px;
+}
+
+
+/*** Responsiveness ***/
+@media( max-width: 1024px ) {
+    form#loginForm, form#signupForm {
+        margin: 8% 20px;
+    }
+
+    form#loginForm input, form#signupForm input {
+        width: 70%;
+    }
+}
+
+@media( max-width: 500px ) {
+    form#loginForm, form#signupForm {
+        margin: 12% 20px;
+    }
+
+    form#loginForm input, form#signupForm input {
+        width: 100%;
+    }
+}
+
+@media( max-width: 425px ) {
+    form#loginForm, form#signupForm {
+        margin: 14% 20px;
+    }
+}

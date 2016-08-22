@@ -1,0 +1,422 @@
+/* main header formatting */
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 64px;
+	background: #36464E;
+	z-index: 99;
+	color: #fff;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-ms-user-select: none;
+	-webkit-transition: .25s;
+	transition: .25s;
+}
+
+/* header container formatting */
+/* exact behavior dictated in media queries at bottom of this doc */
+.header {
+	padding: 0;
+	margin: auto;
+}
+
+/* icons found in main header */
+header .icon.menu {
+	position: relative;
+	top: 6px;
+	cursor: pointer;
+}
+
+header .icon.share {
+	position: relative;
+	top: 20px;
+	right: 16px;
+	cursor: pointer;
+}
+
+header .icon.search {
+	position: relative;
+	top: 20px;
+	cursor: pointer;
+}
+
+header p {
+	display: inline-block;
+	padding: 0 1em;
+	margin: 0;
+	line-height: 64px;
+	text-transform: uppercase;
+}
+
+header p a {
+	color: inherit;
+	text-decoration: none;
+}
+
+/* menu button and project title */
+#header-left {
+	float: left;
+}
+
+/* share button */
+#share {
+	float: right;
+	height: 64px;
+	padding: 0 1em;
+}
+
+/* search box/off-canvas search drawer formatting */
+#search-box {
+	float: right;
+	height: 64px;
+	padding: 0 1em;
+}
+
+.header-search {
+	position: relative;
+	top: 5px;
+	height: 24px;
+	background: transparent;
+	border: none;
+	outline: 0;
+	margin-right: 8px;
+	padding: 0 8px;
+	font-weight: 100;
+}
+
+/* off-canvas left menu drawer */
+#left-menu-drawer {
+	z-index: 99;
+	position: fixed;
+	top: 64px;
+	height: 100vh;
+	background: #455A64;
+	-webkit-transition: .25s;
+	transition: .25s;
+	overflow-y: scroll;
+}
+
+/* off-canvas top search drawer */
+#top-search-drawer {
+	z-index: 99;
+	position: fixed;
+	left: 0;
+	width: 100vw;
+	height: 64px;
+	background: #36464E;
+	-webkit-transition: .25s;
+	transition: .25s;
+}
+
+.top-drawer-search {
+	position: relative;
+	top: 12px;
+	width: 100%;
+	height: 48px;
+	background: #263238;
+	border: none;
+	border-radius: 0;
+	outline: 0;
+	color: #fff;
+	padding: 0 16px;
+	padding-right: 90px;
+	-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* submit button on off-canvas search drawer */
+.submit-search {
+	z-index: 100;
+	position: relative;
+	top: -36px;
+	float: right;
+	color: #fff;
+	background: transparent;
+	height: 48px;
+	padding: 0 1em;
+	border: 0;
+	outline: 0;
+}
+
+/* formatting for elements inside off-canvas left menu drawer */
+#left-menu-drawer .project-nav {
+	display: inline;
+}
+
+#left-menu-drawer .nav-item {
+	margin: 0;
+	overflow: hidden;
+}
+
+#left-menu-drawer .nav-item p {
+	font-size: 80%;
+}
+
+#left-menu-drawer .project-nav a:hover {
+	background: #36464E;
+}
+
+/* formatting for elements inside off-canvas right menu drawer */
+#right-menu-drawer {
+	z-index: 99;
+	position: fixed;
+	top: 64px;
+	height: 100vh;
+	background: #455A64;
+	-webkit-transition: .25s;
+	transition: .25s;
+	overflow-y: scroll;
+}
+
+#right-menu-drawer a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.social-item {
+	display: block;
+	height: 60px;
+	width: 100%;
+	background: #455A64;
+	margin-bottom: 16px;
+	font-size: 80%;
+}
+
+.social-item:hover {
+	background: #263238;
+}
+
+.social-item .icon {
+	position: relative;
+	left: 24px;
+	top: 20px;
+}
+
+.social-item p {
+	width: 100%;
+	text-align: center;
+	margin-top: -6px;
+	margin-left: 1em;
+	text-transform: uppercase;
+}
+
+@media only screen and (max-width: 640px) {
+	.header {
+		width: 85%;
+	}
+
+	/* off-canvas top search drawer behavior */
+	.header-search {
+		display: none;
+	}
+
+	header.search-open {
+		top: 64px;
+	}
+
+	#top-search-drawer.close {
+		top: -64px;
+	}
+
+	#top-search-drawer.open {
+		top: 0;
+	}
+
+	/* off-canvas left menu drawer behavior */
+	#left-menu-drawer {
+		width: 90vw;
+	}
+
+	#left-menu-drawer.close {
+		left: -90vw;
+	}
+
+	#left-menu-drawer.open {
+		left: 0;
+		z-index: 100;
+	}
+
+	/* off-canvas right menu drawer behavior */
+	#right-menu-drawer {
+		width: 75vw;
+	}
+
+	#right-menu-drawer.close {
+		right: -75vw;
+	}
+
+	#right-menu-drawer.open {
+		right: 0;
+	}
+
+	header p {
+		font-size: 80%;
+	}
+
+	header .icon.share {
+		right: 0;
+	}
+}
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+	.header {
+		width: 85%;
+	}
+
+	.header-search {
+		display: none;
+	}
+
+	header.search-open {
+		top: 64px;
+	}
+
+	/* off-canvas top search drawer behavior */
+	#top-search-drawer.close {
+		top: -64px;
+	}
+
+	#top-search-drawer.open {
+		top: 0;
+	}
+
+	/* off-canvas left menu drawer behavior */
+	#left-menu-drawer {
+		width: 40vw;
+	}
+
+	#left-menu-drawer.close {
+		left: -40vw;
+	}
+
+	#left-menu-drawer.open {
+		left: 0;
+	}
+
+
+	/* off-canvas right menu drawer behavior */
+	#right-menu-drawer {
+		width: 35vw;
+	}
+
+	#right-menu-drawer.close {
+		right: -35vw;
+	}
+
+	#right-menu-drawer.open {
+		right: 0;
+	}
+}
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+	.header {
+		width: 95%;
+	}
+
+	header p {
+		padding: 0;
+	}
+
+	/* search box formatting */
+	#search-box {
+		background: #1D2528;
+	}
+
+	#search-box-bg {
+		position: fixed;
+		top: 0;
+		right: 0;
+		height: 64px;
+		width: 2.5%;
+		background: #1D2528;
+	}
+
+	/* hides off-canvas left menu drawer and top search drawer */
+	#left-menu-drawer, #top-search-drawer {
+		display: none;
+	}
+
+	/* off-canvas right menu drawer behavior */
+	#right-menu-drawer {
+		width: 25vw;
+	}
+
+	#right-menu-drawer.close {
+		right: -25vw;
+	}
+
+	#right-menu-drawer.open {
+		right: 0;
+	}
+
+	.icon.menu {
+		display: none;
+	}
+
+	header .icon.search-large {
+		height: 16px;
+		width: 16px;
+		top: 24px;
+	}
+
+	.header-search {
+		top: 20px;
+	}
+}
+@media only screen and (min-width: 1441px) {
+	.header {
+		width: 95%;
+	}
+
+	header p {
+		padding: 0;
+	}
+
+	/* search box formatting */
+	#search-box {
+		background: #1D2528;
+	}
+
+	#search-box-bg {
+		position: fixed;
+		top: 0;
+		right: 0;
+		height: 64px;
+		width: 2.5%;
+		background: #1D2528;
+	}
+
+	/* hides off-canvas left menu drawer and top search drawer */
+	#left-menu-drawer, #top-search-drawer {
+		display: none;
+	}
+
+	/* off-canvas right menu drawer behavior */
+	#right-menu-drawer {
+		width: 20vw;
+	}
+
+	#right-menu-drawer.close {
+		right: -20vw;
+	}
+
+	#right-menu-drawer.open {
+		right: 0;
+	}
+
+	header .icon.menu {
+		display: none;
+	}
+
+	header .icon.search-large {
+		height: 16px;
+		width: 16px;
+		top: 24px;
+	}
+
+	.header-search {
+		top: 20px;
+	}
+}

@@ -1,0 +1,80 @@
+/* sets single exhibit preview image */
+.exhibit-img {
+	position: relative;
+	float: left;
+	width: 100%;
+
+	/* set background image here */
+	/* will need to create multiple instances of this for different exhibits */
+
+	/* background-image: url('https://images.unsplash.com/photo-1433959352364-9314c5b6eb0b?q=80&fm=jpg&s=e3bfea02f099f5b8a177fa03f01fb46e');
+
+	/* center image in div */
+
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin-bottom: 24px;
+	box-shadow: inset 0 -175px 200px -150px #000;
+}
+
+.exhibit-title {
+	position: absolute;
+	bottom: 0;
+	word-wrap: break-word;
+	margin: auto;
+}
+
+.exhibit-title h1 {
+	height: 100%;
+	text-transform: uppercase;
+	padding: 0;
+	margin-bottom: 24px;
+}
+
+/* formatting for map on exhibit map page */
+
+#exhibit-map {
+	float: left;
+	width: 100%;
+	height: 100vh;
+}
+
+/* sets single exhibit preview image container height, depending on screen-width/device */
+
+@media only screen and (max-width: 640px) {
+	.exhibit-img {
+		min-height: 33vh;
+	}
+
+	.exhibit-title {
+		width: 80%;
+	}
+}
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+	.exhibit-img {
+		min-height: 33vh;
+	}
+
+	.exhibit-title {
+		width: 80%;
+	}
+}
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+	.exhibit-img {
+		min-height: 45vh;
+	}
+
+	.exhibit-title {
+		width: 75%;
+	}
+}
+@media only screen and (min-width: 1441px) {
+	.exhibit-img {
+		min-height: 45vh;
+	}
+
+	.exhibit-title {
+		width: 75%;
+	}
+}

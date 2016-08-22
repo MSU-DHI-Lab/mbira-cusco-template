@@ -1,0 +1,346 @@
+/* pushes body down to accomodate fixed header */
+body {
+	margin-top: 64px;
+	background: #36464E;
+}
+
+/* pushes footer to bottom of page */
+.wrap {
+	float: left;
+	width: 100%;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+	background: #36464E;
+
+	color: #fff;
+}
+
+.container {
+	padding: 0;
+    margin: 24px auto;
+}
+
+/* width of left sidebar dictated in media queries at bottom of this doc */
+/* width of left sidebar changes, depending on screen-width/device */
+#left-sidebar {
+	float: left;
+	min-height: 100vh;
+	background: #455A64;
+}
+
+#left-sidebar .project-nav {
+	display: inline;
+	font-size: 80%;
+}
+
+#left-sidebar .project-nav a:hover {
+	background: #36464E;
+}
+
+#left-sidebar .nav-item {
+	margin: 0;
+	overflow: hidden;
+}
+
+#left-sidebar .nav-item p {
+	font-size: 12px;
+}
+
+
+
+/* width of main container dictated in media queries at bottom of this doc */
+/* width of main container changes, depending on screen-width/device */
+.main {
+	float: left;
+}
+
+/* formatting for project nav menu for entire project */
+/* some icons in project-nav's and header are temporarily incorrect due to inavailability of actual icons */
+/* please replace (in template page) when correct icons are available */
+.project-nav {
+	margin: 36px auto;
+}
+
+.project-nav.show {
+	display: block;
+}
+
+.project-nav a {
+	color: #fff;
+	text-decoration: none;
+}
+
+/* formatting for each item in project nav */
+.nav-item {
+	display: block;
+	height: 64px;
+	width: 100%;
+	background: #455A64;
+	font-size: 14px;
+	margin-bottom: 20px;
+}
+
+.nav-item .icon {
+	position: relative;
+	left: 24px;
+	top: 20px;
+}
+
+.nav-item p {
+	width: calc(100% - 65px);
+	height: 65px;
+	text-align: center;
+	margin-top: 0;
+	text-transform: uppercase;
+	float: right;
+	line-height: 64px;
+}
+
+.nav-item img {
+	padding: 20px;
+	height: 25px;
+	width: 25px;
+}
+
+.nav-item span {
+	padding-right: 65px;
+}
+
+.nav-item p, .nav-item img {
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.social:hover {
+	background: #263238;
+}
+
+/* formatting for tiles found in exhibits, explorations and media pages */
+/* width and height of tiles dictated in media queries at bottom of this doc */
+.tiles {
+	width: 100%;
+}
+
+.tile {
+	float: left;
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+	margin: 0;
+}
+
+.tile img {
+	height: 100%;
+}
+
+.tile-name {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background: rgba(38, 50, 56, .75);
+	color: #fff;
+}
+
+.tile-name p {
+	padding: 0 12px;
+	text-align: center;
+}
+
+/* return location container formatting */
+.return-location {
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	height: 64px;
+
+	/* background image will depend on exhibit/project/location the page is associated with */
+	/* change image here, developer will need to create multiple instances of this class for different exhibit/project/location */
+
+}
+
+.return-location .overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 64px;
+	background: rgba(38, 50, 56, .75);
+}
+
+.return-location .container {
+	margin-top: 0;
+}
+
+.return-location a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.return-location .icon {
+	display: inline-block;
+	position: relative;
+	top: 6px;
+}
+
+.return-location p {
+	display: inline;
+	line-height: 64px;
+	text-transform: uppercase;
+	margin-left: 16px;
+}
+
+.title {
+	width: 100%;
+}
+
+.title h1 {
+	line-height: 1;
+	text-transform: uppercase;
+}
+
+.title-with-backButton {
+	margin-top: 90px;
+}
+
+.project-shortDescription {
+	font-size: 20px !important;
+	font-style: italic;
+}
+
+.project-description {
+	line-height: 1.5;
+	white-space: pre-line;
+}
+
+.project-shortDescription-home {
+	font-size: 18px !important;
+	font-style: italic;
+}
+
+.project-description-home {
+ text-overflow: ellipsis !important;
+  max-height: 340px;
+	white-space: pre-line;
+  overflow: hidden;
+	display: block;
+	width: 100%;
+}
+
+.learn-more-home a{
+	text-decoration: none;
+	color: #29B6F6;
+}
+
+@media only screen and (max-width: 640px) {
+    .container {
+    	width: 85%;
+    }
+
+    #left-sidebar {
+	    display: none;
+    }
+
+		.main {
+			width: 100vw;
+		}
+
+		.main.project-home {
+			width: 100vw;
+		}
+
+    .tile {
+		width: calc(100vw / 2);
+		height: calc(100vw / 2);
+	}
+}
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+    .container {
+	    width: 85%;
+    }
+
+    #left-sidebar {
+	    display: none;
+    }
+
+		.main {
+			width: 100vw;
+		}
+
+		.main.project-home {
+			width: 100vw;
+		}
+
+    .tile {
+		width: calc(100vw / 3);
+		height: calc(100vw / 3);
+	}
+}
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+    .container {
+	    width: 90%;
+    }
+
+	#left-sidebar {
+	    width: 25vw;
+    }
+
+		.main {
+			width: 75vw;
+		}
+
+		.main.project-home {
+			width: 100vw;
+		}
+
+    .project-nav {
+		display: none;
+	}
+
+	.project-nav.show {
+		width: 90%;
+	}
+
+	.tile {
+		width: calc(75vw / 4);
+		height: calc(75vw / 4);
+	}
+}
+@media only screen and (min-width: 1441px) {
+    .container {
+	    width: 90%;
+    }
+
+    #left-sidebar {
+	    width: 20vw;
+    }
+
+    .main {
+	    width: 80vw;
+    }
+
+		.main.project-home {
+	    width: 100vw;
+    }
+
+    .project-nav {
+		display: none;
+	}
+
+	.project-nav.show {
+		width: 90%;
+	}
+
+	.tile {
+		width: calc(80vw / 7);
+		height: calc(80vw / 7);
+	}
+}
+
+
+div.remodal textarea {
+	min-height: 80px;
+	margin: 20px 0 0 0;
+	resize: vertical;
+}

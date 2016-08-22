@@ -1,0 +1,23 @@
+// COLORS
+
+blue: 			#36464E;
+darkblue: 		#263238;
+lightblue: 		#455A64;
+neonblue: 		#28BDFF;
+brightblue: 	#77909D;
+
+
+// MEDIA QUERIES
+
+@media only screen and (max-width: 640px) {
+	
+}
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+	
+}
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+	
+}
+@media only screen and (min-width: 1441px) {
+	
+}

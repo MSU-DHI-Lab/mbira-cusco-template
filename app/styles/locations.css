@@ -1,0 +1,130 @@
+/* sets location preview image */
+.location-img {
+	position: relative;
+	float: left;
+	width: 100%;
+
+	/* set background image here */
+	/* will need to create multiple instances of this for different locations */
+
+	/* background-image: url('https://images.unsplash.com/photo-1433838552652-f9a46b332c40?q=80&fm=jpg&s=97cb7cd5e219e932365f3bcff3950eda');
+
+	/* center image in div */
+
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin-bottom: 24px;
+	box-shadow: inset 0 -175px 200px -150px #000;
+}
+
+/* container with links to location exhibit and exploration */
+.location-img #location-links {
+	float: left;
+	width: 100%;
+	height: 60px;
+	background: rgba(38, 50, 56, .5);
+}
+
+.location-img #location-links .exhibits {
+	float: left;
+	position: relative;
+	top: 16px;
+}
+
+.location-img #location-links .exploration {
+	float: right;
+	position: relative;
+	top: 16px;
+}
+
+.location-img #location-links.exploration-location {
+	float: left;
+	width: 100%;
+	height: 60px;
+	background: rgba(38, 50, 56, .5);
+}
+
+.location-img #location-links.exploration-location .exhibits {
+	float: left;
+	position: relative;
+	top: 16px;
+}
+
+.location-img #location-links.exploration-location .exploration-stop {
+	float: right;
+}
+
+.location-img #location-links.exploration-location .exploration-stop p {
+	float: left;
+	color: #28BDFF;
+	margin-right: 16px;
+	text-align: center;
+	font-size: 80%;
+}
+
+.location-img #location-links.exploration-location .exploration {
+	float: left;
+	position: relative;
+	top: 16px;
+}
+
+.location-title {
+	position: absolute;
+	bottom: 0;
+	word-wrap: break-word;
+	margin: auto;
+}
+
+.location-title h1 {
+	height: 100%;
+	text-transform: uppercase;
+	padding: 0;
+	margin-bottom: 24px;
+}
+
+/* formatting for map on location map page */
+
+#location-map {
+	width: 100%;
+	height: 100vh;
+}
+
+/* sets single location preview image container height, depending on screen-width/device */
+
+@media only screen and (max-width: 640px) {
+	.location-img {
+		min-height: 33vh;
+	}
+
+	.location-title {
+		width: 90%;
+	}
+}
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+	.location-img {
+		min-height: 33vh;
+	}
+
+	.location-title {
+		width: 80%;
+	}
+}
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+	.location-img {
+		min-height: 45vh;
+	}
+
+	.location-title {
+		width: 75%;
+	}
+}
+@media only screen and (min-width: 1441px) {
+	.location-img {
+		min-height: 45vh;
+	}
+
+	.location-title {
+		width: 75%;
+	}
+}

@@ -1,0 +1,252 @@
+/* icon image files found in ./icons */
+/* some icons in project-nav's and header are temporarily incorrect due to inavailability of actual icons */
+
+/* icon set up */
+
+.icon {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+}
+
+/*
+.icon.menu {
+	-webkit-mask: url(icons/hamburger.svg) no-repeat 50% 50%;
+	mask: url(icons/hamburger.svg) no-repeat 50% 50%;
+	-webkit-mask-size: cover;
+	mask-size: cover;
+	background: #fff;
+}*/
+
+/*
+.icon.active {
+	background: #28BDFF;
+}*/
+
+/* icons */
+
+.icon.media {
+	-webkit-mask: url(icons/media.svg) no-repeat 50% 50%;
+	mask: url(icons/media.svg) no-repeat 50% 50%;
+	-webkit-mask-size: cover;
+	mask-size: cover;
+	background: #fff;
+}
+
+.icon.map {
+	-webkit-mask: url(icons/map.svg) no-repeat 50% 50%;
+	mask: url(icons/map.svg) no-repeat 50% 50%;
+	-webkit-mask-size: cover;
+	mask-size: cover;
+	background: #fff;
+}
+
+.icon.random {
+	-webkit-mask: url(icons/random.svg) no-repeat 50% 50%;
+	mask: url(icons/random.svg) no-repeat 50% 50%;
+	-webkit-mask-size: cover;
+	mask-size: cover;
+	background: #fff;
+}
+/*
+.icon.search {
+	-webkit-mask: url(icons/search.svg) no-repeat 50% 50%;
+	mask: url(icons/search.svg) no-repeat 50% 50%;
+	-webkit-mask-size: cover;
+	mask-size: cover;
+	background: #fff;
+}*/
+/*
+.icon.search-large {
+	-webkit-mask: url(icons/search.svg) no-repeat 50% 50%;
+	mask: url(icons/search.svg) no-repeat 50% 50%;
+	-webkit-mask-size: cover;
+	mask-size: cover;
+	background: #fff;
+}*/
+
+.icon.info {
+	-webkit-mask: url(icons/info.svg) no-repeat 50% 50%;
+	mask: url(icons/info.svg) no-repeat 50% 50%;
+	-webkit-mask-size: cover;
+	mask-size: cover;
+	background: #fff;
+}
+
+.icon.dig-deeper {
+	-webkit-mask: url(icons/digdeeper.svg) no-repeat 50% 50%;
+	mask: url(icons/digdeeper.svg) no-repeat 50% 50%;
+	-webkit-mask-size: cover;
+	mask-size: cover;
+	background: #fff;
+}
+
+.icon.discussions {
+	-webkit-mask: url(icons/discussions.svg) no-repeat 50% 50%;
+	mask: url(icons/discussions.svg) no-repeat 50% 50%;
+	-webkit-mask-size: cover;
+	mask-size: cover;
+	background: #fff;
+}
+
+/*
+.icon.exhibits {
+	-webkit-mask: url(icons/Exhibits.svg) no-repeat 50% 50%;
+	mask: url(icons/Exhibits.svg#maskid-exhibits);
+	-webkit-mask-size: cover;
+	mask-size: cover;
+	background: #fff;
+}
+
+
+.icon.exploration {
+	-webkit-mask: url(icons/Exploration.svg) no-repeat 50% 50%;
+	mask: url(icons/Exploration.svg) no-repeat 50% 50%;
+	-webkit-mask-size: cover;
+	mask-size: cover;
+	background: #fff;
+}*/
+
+.icon.exploration-point {
+	-webkit-mask: url(icons/ExplorationPoint.svg) no-repeat 50% 50%;
+	mask: url(icons/ExplorationPoint.svg) no-repeat 50% 50%;
+	-webkit-mask-size: cover;
+	mask-size: cover;
+	background: #fff;
+}
+
+.icon.exploration-point1 {
+	-webkit-mask: url(icons/ExplorationPoint1.svg) no-repeat 50% 50%;
+	mask: url(icons/ExplorationPoint1.svg) no-repeat 50% 50%;
+	-webkit-mask-size: cover;
+	mask-size: cover;
+	background: #fff;
+}
+
+.icon.location {
+	-webkit-mask: url(icons/location.svg) no-repeat 50% 50%;
+	mask: url(icons/location.svg) no-repeat 50% 50%;
+	-webkit-mask-size: cover;
+	mask-size: cover;
+	background: #fff;
+
+}
+
+.icon.location-exploration {
+	-webkit-mask: url(icons/locationExploration.svg) no-repeat 50% 50%;
+	mask: url(icons/locationExploration.svg) no-repeat 50% 50%;
+	-webkit-mask-size: cover;
+	mask-size: cover;
+	background: #fff;
+
+}
+
+.icon.location-white {
+	-webkit-mask: url(icons/locationWhite.svg) no-repeat 50% 50%;
+	mask: url(icons/locationWhite.svg) no-repeat 50% 50%;
+	-webkit-mask-size: cover;
+	mask-size: cover;
+	background: #fff;
+
+}
+
+.icon.arrow-left {
+	-webkit-mask: url(icons/arrow-left.svg) no-repeat 50% 50%;
+	mask: url(icons/arrow-left.svg) no-repeat 50% 50%;
+	-webkit-mask-size: cover;
+	mask-size: cover;
+	background: #fff;
+}
+
+.icon.arrow-right {
+	background: none !important;
+}
+
+/*
+.icon.arrow-right {
+	-webkit-mask: url(icons/arrow-right.svg) no-repeat 50% 50%;
+	mask: url(icons/arrow-right.svg) no-repeat 50% 50%;
+	-webkit-mask-size: cover;
+	mask-size: cover;
+	background: #fff;
+}*/
+
+.icon.arrow2-right {
+	-webkit-mask: url(icons/arrow2-left.svg) no-repeat 50% 50%;
+	-webkit-mask-size: cover;
+	mask-size: cover;
+	background: #fff;
+}
+
+/* temporary icons, image files found in ./icons/temp */
+/* please replace these with official SVG icons when available */
+
+.icon.close {
+	-webkit-mask: url(icons/temp/close.svg) no-repeat 50% 50%;
+	-webkit-mask-size: cover;
+	mask-size: cover;
+	background: #fff;
+}
+
+.icon.add {
+	-webkit-mask: url(icons/temp/add.svg) no-repeat 50% 50%;
+	-webkit-mask-size: cover;
+	mask-size: cover;
+	background: #fff;
+}
+/*
+.icon.share {
+	-webkit-mask: url(icons/temp/share.svg) no-repeat 50% 50%;
+	-webkit-mask-size: cover;
+	mask-size: cover;
+	background: #fff;
+}*/
+
+.icon.message {
+	-webkit-mask: url(icons/temp/message.svg) no-repeat 50% 50%;
+	-webkit-mask-size: cover;
+	mask-size: cover;
+	background: #fff;
+}
+
+.icon.mail {
+	-webkit-mask: url(icons/temp/mail.svg) no-repeat 50% 50%;
+	-webkit-mask-size: cover;
+	mask-size: cover;
+	background: #fff;
+}
+
+.icon.copy-link {
+	-webkit-mask: url(icons/temp/link.svg) no-repeat 50% 50%;
+	-webkit-mask-size: cover;
+	mask-size: cover;
+	background: #fff;
+}
+
+.icon.facebook {
+	-webkit-mask: url(icons/temp/facebook.svg) no-repeat 50% 50%;
+	-webkit-mask-size: cover;
+	mask-size: cover;
+	background: #fff;
+}
+
+.icon.twitter {
+	-webkit-mask: url(icons/temp/twitter.svg) no-repeat 50% 50%;
+	-webkit-mask-size: cover;
+	mask-size: cover;
+	background: #fff;
+}
+
+.icon.google-plus {
+	-webkit-mask: url(icons/temp/google-plus.svg) no-repeat 50% 50%;
+	-webkit-mask-size: cover;
+	mask-size: cover;
+	background: #fff;
+}
+
+.icon.foursquare {
+	-webkit-mask: url(icons/temp/foursquare.svg) no-repeat 50% 50%;
+	-webkit-mask-size: cover;
+	mask-size: cover;
+	background: #fff;
+}

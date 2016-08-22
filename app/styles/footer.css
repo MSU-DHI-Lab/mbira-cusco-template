@@ -1,0 +1,14 @@
+footer {
+	z-index: 99;
+	float: left;
+	width: 100%;
+	padding: 50px 0;
+	background: #263238;
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+footer img {
+	width: 300px;
+}
