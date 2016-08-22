@@ -12,6 +12,7 @@
 		header('Location: ./index.php'); 		///< go to homepage if the id is unknown
 	}
 	$count = count($media);
+	var_dump($media[0])
 ?>
 
 <div class="main">
@@ -44,15 +45,17 @@
 			// placeholder picture found in ./app/img
 
 			for ($x = 0; $x < $count; $x++) {
-				echo '
-					<a href="#">
-						<div class="tile">
-							<a href='.$source.$media[$x]['thumb_path'].' data-lightbox="image-1" data-title="'.$source.$media[$x]['description'].'">
-								<img src='.$source.$media[$x]['thumb_path'].' alt="'.$source.$media[$x]['alt_desc'].'">
-							</a>
-						</div>
-					</a>
-				';
+				if ($media[$x]['isThumb'] == 'no' || $media[$x]['description'] === '' || !empty($media[$x]['description'])) {
+					echo '
+						<a href="#">
+							<div class="tile">
+								<a href='.$source.$media[$x]['thumb_path'].' data-lightbox="image-1" data-title="'. (empty($media[$x]['description']) ? "This media item does not have a caption description." : $media[$x]['description']).'">
+									<img src='.$source.$media[$x]['thumb_path'].' alt="'.$media[$x]['alt_desc'].'">
+								</a>
+							</div>
+						</a>
+					';
+				}
 			}
 
 		?>
