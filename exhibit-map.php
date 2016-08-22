@@ -118,15 +118,16 @@ $diff = max($diffLatitude, $diffLongitude); 							///< The distance of farthest
 
 $zoomLevel = 12 - ceil($diff / 4); 										///< Calculate zoom level so that all locations&areas are displayed on map
 
+var_dump($zoomLevel);
 if($zoomLevel < 2) { 					/// Set minimum zoom level
-	$zoomLevel = 2;
+	$zoomLevel = 4;
 }
 
 echo "<script>
 // initialize map for exhibit
 // will need multiples instances of this file for multiple maps
 
-var exhibitMap = L.map('exhibit-map').setView([".$latitude.", ".$longitude."], $zoomLevel);
+var exhibitMap = L.map('exhibit-map').setView([".$latitude.", ".$longitude."], ".$zoomLevel.");
 
 // sets location of map
 // please replace with MATRIX mapbox account
