@@ -23,7 +23,7 @@
 			<span class="overlay">
 				<div class="container header">
 					<img class="icon" src="app/styles/icons/arrow-left.svg" />
-					<p>Exploration Name</p>
+					<p><?php echo $exploration->getName() ?></p>
 				</div>
 			</span>
 		</a>

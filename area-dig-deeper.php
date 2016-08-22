@@ -22,7 +22,7 @@
 			<span class="overlay">
 				<div class="container header">
 					<img class="icon" src="app/styles/icons/arrow-left.svg" />
-					<p>Area</p>
+					<p><?php echo $area->getName() ?></p>
 				</div>
 			</span>
 		</a>

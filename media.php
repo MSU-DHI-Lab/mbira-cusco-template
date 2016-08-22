@@ -20,7 +20,7 @@
 			<span class="overlay">
 				<div class="container header">
 					<img class="icon" src="app/styles/icons/arrow-left.svg" />
-					<p>Location</p>
+					<p><?php echo $locations->get($id)->getName() ?></p>
 				</div>
 			</span>
 		</a>
@@ -37,11 +37,6 @@
 	<div class="tiles">
 
 		<?php
-
-			// replace this loop with actual exhibit tiles following the same HTML formatting
-			// formatting for tiles found in main.css
-
-			// placeholder picture found in ./app/img
 
 			for ($x = 0; $x < $count; $x++) {
 				if ($media[$x]['isThumb'] == 'no' || $media[$x]['description'] === '' || !empty($media[$x]['description'])) {

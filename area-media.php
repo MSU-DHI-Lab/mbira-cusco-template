@@ -21,7 +21,7 @@
 			<span class="overlay">
 				<div class="container header">
 					<img class="icon" src="app/styles/icons/arrow-left.svg" />
-					<p>Area</p>
+					<p><?php echo $areas->get($id)->getName() ?></p>
 				</div>
 			</span>
 		</a>
@@ -45,15 +45,17 @@
 			// placeholder picture found in ./app/img
 
 			for ($x = 0; $x < $count; $x++) {
-				echo '
-					<a href="#">
-						<div class="tile">
-							<a href='.$source.$media[$x].' data-lightbox="image-1" data-title="Cup sit carajillo affogato, con panna at, viennese froth mazagran that carajillo, to go, lungo, trifecta robusta brewed dark turkish frappuccino instant.">
-								<img src='.$source.$media[$x].' alt="">
-							</a>
-						</div>
-					</a>
-				';
+				if ($media[$x]['isThumb'] == 'no' || $media[$x]['description'] === '' || !empty($media[$x]['description'])) {
+					echo '
+						<a href="#">
+							<div class="tile">
+								<a href='.$source.$media[$x]['thumb_path'].' data-lightbox="image-1" data-title="'. (empty($media[$x]['description']) ? "This media item does not have a caption description." : $media[$x]['description']).'">
+									<img src='.$source.$media[$x]['thumb_path'].' alt="'.$media[$x]['alt_desc'].'">
+								</a>
+							</div>
+						</a>
+					';
+				}
 			}
 
 		?>

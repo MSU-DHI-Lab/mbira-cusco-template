@@ -53,12 +53,14 @@
 		$table;
 
 		if ($type == 'location') {
+			$titleName = $locations->get($id)->getName();
 			$type_php = 'location.php';
         	$sql =<<<SQL
 SELECT id, user_id, location_id, replyTo, isPending, UNIX_TIMESTAMP(created_at), deleted, comment from mbira_location_comments
 where location_id=?
 SQL;
 		} else if ($type == 'area') {
+			$titleName = $areas->get($id)->getName();
 			$type_php = 'area.php';
         	$sql =<<<SQL
 SELECT id, user_id, area_id, replyTo, isPending, UNIX_TIMESTAMP(created_at), deleted, comment from mbira_area_comments
@@ -164,7 +166,7 @@ SQL;
 			<span class="overlay">
 				<div class="container header">
 					<img class="icon" src="app/styles/icons/arrow-left.svg" />
-					<p><?php echo $type; ?></p>
+					<p><?php echo $titleName; ?></p>
 				</div>
 			</span>
 		</a>

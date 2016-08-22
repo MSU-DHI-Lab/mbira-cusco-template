@@ -18,7 +18,7 @@ if(isset($_GET['id'])) {
 			<span class="overlay">
 				<div class="container header">
 					<img class="icon" src="app/styles/icons/arrow-left.svg" />
-					<p>Location</p>
+					<p><?php echo $location->getName() ?></p>
 				</div>
 			</span>
 		</a>
