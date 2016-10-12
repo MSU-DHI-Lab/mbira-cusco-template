@@ -36,7 +36,9 @@
 		<!-- will trigger off-canvas top search drawer on screen-widths/devices less than 1025px -->
 		<!-- will change to search box inside main header on screen-widths/devices larger than 1025px -->
 		<span id="search-box">
-			<input type="text" placeholder="Search..." class="header-search">
+      <form action="search.php" method="post">
+			     <input type="text" name="query" placeholder="Search..." class="header-search">
+      </form>
 			<img src="app/styles/icons/search.svg" class="icon search"/>
 		</span>
 
@@ -93,8 +95,10 @@
 <!-- replaced with search box inside main header -->
 <aside id="top-search-drawer" class="close">
 	<div class="container header">
-		<input type="text" class="top-drawer-search" placeholder="Search..." />
-		<button type="submit" class="submit-search">Search</button>
+    <form action="search.php" method="post">
+  		<input type="text" name="query" class="top-drawer-search" placeholder="Search..." />
+  		<button type="submit" class="submit-search">Search</button>
+    </form>
 	</div>
 </aside>
 

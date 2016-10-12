@@ -344,3 +344,8 @@ div.remodal textarea {
 	margin: 20px 0 0 0;
 	resize: vertical;
 }
+
+.search-not-found {
+margin: 0px auto;
+  width: 90%;
+}
