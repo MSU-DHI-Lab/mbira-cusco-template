@@ -9,7 +9,11 @@ include 'app/inc/left-sidebar.php';
 <form id="loginForm" action="#" method="post">
 
 <h1 id="loginHeader">Validating</h1>
-<p>Email has been sent to you for validation. Please click on the validation link before you try to log in.</p>
+<p>
+<?php
+  echo $_SESSION['validating-text'];
+  unset($_SESSION['validating-text']);
+?></p>
 <p><a href="login.php">Back to Login</a> </p>
 
 </form>
