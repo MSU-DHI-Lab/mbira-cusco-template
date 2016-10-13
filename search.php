@@ -6,8 +6,6 @@ include 'app/inc/left-sidebar.php';
 // include 'lib/site.php';
 $login = false;
 
-require_once "lib/site.php";
-
 unset($_SESSION['search-error']);
 
 $response = $search->newSearch(
