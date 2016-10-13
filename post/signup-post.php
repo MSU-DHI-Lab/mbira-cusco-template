@@ -7,7 +7,6 @@ require_once "../lib/site.php";
 
 unset($_SESSION['newuser-error']);
 
-var_dump($_POST);
 $msg = $users->newUser(
     strip_tags($_POST['username']),
     strip_tags($_POST['firstName']),
@@ -23,5 +22,6 @@ if($msg !== null) {
     exit;
 }
 
+$_SESSION['validating-text'] = "An email has been sent to you for validation. Please click on the validation link to be able to log in.";
 header("location: ../validating.php");
 exit;
