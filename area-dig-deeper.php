@@ -1,9 +1,9 @@
 <?php
 	ob_start();		 // ensures anything dumped out will be caught
 
-	include 'app/inc/head.php';
-	include 'app/inc/left-sidebar.php';
 	include 'lib/site.php';
+  include 'app/inc/head.php';
+	include 'app/inc/left-sidebar.php';
 
 	if(isset($_GET['id'])) {
 		$id = $_GET['id'];

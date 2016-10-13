@@ -1,9 +1,9 @@
 <?php
 	ob_start();		 // ensures anything dumped out will be caught
-
+  
+	include 'lib/site.php';
 	include 'app/inc/head.php';
 	include 'app/inc/left-sidebar.php';
-	include 'lib/site.php';
 
 	if(isset($_GET['id'])) {
 		$id = $_GET['id'];
@@ -36,7 +36,7 @@
 
 	<div class="container dig-description">
 		<p>
-			<?php echo $location->getDigDeeper(); ?> 
+			<?php echo $location->getDigDeeper(); ?>
 		</p>
 	</div>
 

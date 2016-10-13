@@ -1,4 +1,5 @@
 <?php
+	include 'lib/site.php';
 	include 'app/inc/head.php';
 	include 'app/inc/left-sidebar.php';
 ?>

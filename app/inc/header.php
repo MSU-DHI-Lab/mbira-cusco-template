@@ -83,10 +83,17 @@
 			<p><span>Learn More</span></p>
 		</a>
 
-		<a href="login.php" class="nav-item">
-			<img src="app/styles/icons/signIn.svg" />
-			<p><span>Sign In</span></p>
-		</a>
+    <?php if(!isset($_SESSION['user'])) { ?>
+  		<a href="login.php" class="nav-item">
+  			<img src="app/styles/icons/signIn.svg" />
+  			<p><span>Sign In</span></p>
+  		</a>
+    <?php } else { ?>
+      <a href="logout.php" class="nav-item">
+  			<img src="app/styles/icons/signIn.svg" />
+  			<p><span>Log Out</span></p>
+      </a>
+    <?php } ?>
 
 	</div>
 </aside>
