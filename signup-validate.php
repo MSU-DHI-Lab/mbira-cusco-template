@@ -10,7 +10,16 @@ $login = false;
 require_once "lib/site.php";
 
 $controller = new ValidationController($site);
-$msg = $controller->validate($_GET['v']);
+$user = $controller->validate($_GET['v']);
 
-header("location: login.php");
+if ($user == "Invalid validator") {
+  $_SESSION['login-error'] = $msg;
+  header("location: login.php");
+  exit;
+} else {
+  $_SESSION['user'] = $user;
+  unset($_SESSION['login-error']);
+}
+
+header("location: index.php");
 exit;
