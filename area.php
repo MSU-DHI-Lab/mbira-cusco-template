@@ -26,20 +26,32 @@
 			<p><span>VIEW ON MAP</span></p>
 		</a>
 
+<?php
+  if($areas->getDigDeeperToggle($_GET['id'])[0][0] == "true"){
+?>
 	<a href=<?php echo "area-dig-deeper.php?id=$id";?> class="nav-item">
 		<img src="app/styles/icons/digdeeper.svg" />
 		<p><span>DIG DEEPER</span></p>
 	</a>
+<?php } ?>
 
+<?php
+  if($areas->getMediaToggle($_GET['id'])[0][0] == "true"){
+?>
 	<a href=<?php echo "area-media.php?id=$id";?> class="nav-item">
 		<img src="app/styles/icons/media.svg" />
 		<p><span>View Media</span></p>
 	</a>
+<?php } ?>
 
+<?php
+  if($areas->getCommentsToggle($_GET['id'])[0][0] == "true"){
+?>
 	<a href="#" class="nav-item">
 		<img src="app/styles/icons/discussions.svg" />
 		<p><span>View Conversations</span></p>
 	</a>
+<?php } ?>
 
 	<a href=<?php echo "exhibit.php?id=$exhibitId";?> class="nav-item">
 		<img src="app/styles/icons/Exhibits.svg" />
@@ -118,20 +130,33 @@
 			<p><span>View Area on Map</span></p>
 		</a>
 
+  <?php
+    if($areas->getDigDeeperToggle($_GET['id'])[0][0] == "true"){
+  ?>
 		<a href=<?php echo"area-dig-deeper.php?id=$id"; ?> class="nav-item">
 			<img src="app/styles/icons/digdeeper.svg" />
 			<p><span>Dig Deeper</span></p>
 		</a>
+  <?php } ?>
 
+  <?php
+    if($areas->getMediaToggle($_GET['id'])[0][0] == "true"){
+  ?>
 		<a href=<?php echo "area-media.php?id=".$id; ?> class="nav-item">
 			<img src="app/styles/icons/media.svg" />
 			<p><span>View Media</span></p>
 		</a>
+  <?php } ?>
 
+
+  <?php
+    if($areas->getCommentsToggle($_GET['id'])[0][0] == "true"){
+  ?>
 		<a href=<?php echo "conversations.php?type=area&id=".$id; ?>  class="nav-item">
 			<img src="app/styles/icons/discussions.svg" />
 			<p><span>View Conversations</span></p>
 		</a>
+  <?php } ?>
 
 	</div>
 

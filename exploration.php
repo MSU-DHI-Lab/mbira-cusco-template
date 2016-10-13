@@ -48,15 +48,14 @@
 			<p><span>Start Exploration</span></p>
 		</a>
 
-		<a href="media.php" class="nav-item">
-			<img src="app/styles/icons/media.svg" />
-			<p><span>View media</span></p>
-		</a>
-
+  <?php
+    if($explorations->getCommentsToggle($_GET['id'])[0][0] == "true"){
+  ?>
 		<a href="#" class="nav-item">
 			<img src="app/styles/icons/discussions.svg" />
 			<p><span>View conversations</span></p>
 		</a>
+  <?php } ?>
 
 	</div>
 

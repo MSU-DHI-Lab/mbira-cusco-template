@@ -23,20 +23,32 @@
 			<p><span>VIEW ON MAP</span></p>
 		</a>
 
+    <?php
+      if($locations->getDigDeeperToggle($_GET['id'])[0][0] == "true"){
+    ?>
 		<a href=<?php echo "dig-deeper.php?id=$id";?> class="nav-item">
 			<img src="app/styles/icons/digdeeper.svg" />
 			<p><span>DIG DEEPER</span></p>
 		</a>
+  <?php } ?>
 
+  <?php
+    if($locations->getMediaToggle($_GET['id'])[0][0] == "true"){
+  ?>
 		<a href=<?php echo "media.php?id=$id";?> class="nav-item">
 			<img src="app/styles/icons/media.svg" />
 			<p><span>View Media</span></p>
 		</a>
+  <?php } ?>
 
+  <?php
+    if($locations->getCommentsToggle($_GET['id'])[0][0] == "true"){
+  ?>
 		<a href=# class="nav-item">
 			<img src="app/styles/icons/discussions.svg" />
 			<p><span>View&nbspconversations</span></p>
 		</a>
+  <?php } ?>
 
 		<a href=<?php echo "exhibit.php?id=$exhibitId";?> class="nav-item">
 			<img src="app/styles/icons/Exhibits.svg" />
@@ -77,12 +89,12 @@
 
 		<a href="login.php" class="nav-item">
 			<img src="app/styles/icons/signIn.svg" />
-			<p><span><?php 
+			<p><span><?php
 				if(isset($_SESSION['user'])) {
 					echo 'Log out';
 				} else {
 					echo 'Sign In';
-				} 
+				}
 			?></span></p>
 		</a>
 	</div>
@@ -120,20 +132,33 @@
 			<p><span>VIEW ON MAP</span></p>
 		</a>
 
+  <?php
+    if($locations->getDigDeeperToggle($_GET['id'])[0][0] == "true"){
+  ?>
 		<a href=<?php echo"dig-deeper.php?id=$id"; ?> class="nav-item">
 			<img src="app/styles/icons/digdeeper.svg" />
 			<p><span>Dig Deeper</span></p>
 		</a>
+  <?php } ?>
 
+
+  <?php
+    if($locations->getMediaToggle($_GET['id'])[0][0] == "true"){
+  ?>
 		<a href=<?php echo "media.php?id=".$id; ?> class="nav-item">
 			<img src="app/styles/icons/media.svg" />
 			<p><span>view media</span></p>
 		</a>
+  <?php } ?>
 
+  <?php
+    if($locations->getCommentsToggle($_GET['id'])[0][0] == "true"){
+  ?>
 		<a href=<?php echo "conversations.php?type=location&id=".$id; ?> class="nav-item">
 			<img src="app/styles/icons/discussions.svg" />
 			<p><span>View conversations</span></p>
 		</a>
+  <?php } ?>
 
 	</div>
 
