@@ -1,7 +1,6 @@
 <?php
 	include 'lib/site.php';
-	include 'app/inc/head.php';
-	include 'app/inc/left-sidebar.php';
+
 
 
 	$explorationId = $_GET['id'];
@@ -14,6 +13,11 @@
 		$location = $locations->get($id);
 		array_push($locationList, $location);
 	}
+
+  $headerPath = $exploration->getHeaderPath();
+	$name = $exploration->getName();
+  include 'app/inc/head.php';
+	include 'app/inc/left-sidebar.php';
 
 ?>
 

@@ -1,7 +1,5 @@
 <?php
 	ob_start();		 // ensures anything dumped out will be caught
-
-	include 'app/inc/head.php';
 	include 'lib/site.php';
 
 	if(isset($_GET['id'])) {
@@ -11,7 +9,9 @@
 		header('Location: ./index.php'); 		///< go to homepage if the id is unknown
 	}
 	$exhibitId = $location->getExhibitId();
-	$headerPath = $location->getHeaderPath();
+  $headerPath = $location->getHeaderPath(); //Also used by head.php
+  $name = $location->getName(); //Used by head.php
+	include 'app/inc/head.php';
 
 ?>
 

@@ -1,18 +1,22 @@
 <?php
-	ob_start();		 // ensures anything dumped out will be caught
-
-	include 'lib/site.php';
-	include 'app/inc/head.php';
-	include 'app/inc/left-sidebar.php';
+	ob_start();
+  include 'lib/site.php';
 
 	if(isset($_GET['id'])) {
 		$id = $_GET['id'];
-		$media = $areas->getMedia($id);
+    $media = $areas->getMedia($id);
+		$area = $areas->get($id);
 	}else {
 		header('Location: ./index.php'); 		///< go to homepage if the id is unknown
 	}
-	$count = count($media);
-	$source = "http://mbira.matrix.msu.edu/try/plugins/mbira_plugin/images/";
+
+  $headerPath = $area->getHeaderPath(); //Also used by head.php
+  $name = $area->getName(); //Used by head.php
+  include 'app/inc/head.php';
+	include 'app/inc/left-sidebar.php';
+
+  $count = count($media);
+
 ?>
 
 <div class="main">

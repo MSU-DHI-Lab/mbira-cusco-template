@@ -2,8 +2,6 @@
 	ob_start();		 // ensures anything dumped out will be caught
 
 	include 'lib/site.php';
-	include 'app/inc/head.php';
-	include 'app/inc/left-sidebar.php';
 
 	$exhibitID = $_GET['id'];
 	$exhibit = $exhibits->get($exhibitID);
@@ -29,6 +27,11 @@
 			array_push($areaList,$area);				/// Get locations and put them in the array
 		}
 	}
+
+  $headerPath = $exhibit->getHeaderPath(); //Also used by head.php
+  $name = $exhibit->getName(); //Used by head.php
+	include 'app/inc/head.php';
+  include 'app/inc/left-sidebar.php';
 ?>
 
 <div class="main">

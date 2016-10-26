@@ -1,12 +1,14 @@
 <?php
 	require "lib/site.php";
-	include 'app/inc/head.php';
-	include 'app/inc/left-sidebar.php';
 
 	$project = $projects->get($projectID);      ///< Load the project
 	$name = $project->getName();        ///< Get project name
 	$des = $project->getDes();          ///< Get project description
 	$short_des = $project->getShortdes();   ///< Get project short description
+
+  $headerPath = $project->getHeaderPath(); //Also used by head.php
+  include 'app/inc/head.php';
+	include 'app/inc/left-sidebar.php';
 	?>
 
 <div class="main">

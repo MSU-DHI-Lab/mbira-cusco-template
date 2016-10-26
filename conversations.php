@@ -1,8 +1,6 @@
 <?php
 	require 'lib/class/User.php';
 	require 'lib/site.php';
-	include 'app/inc/head.php';
-	include 'app/inc/left-sidebar.php';
 
 	$user;
 	$usersName;
@@ -53,14 +51,28 @@
 		$table;
 
 		if ($type == 'location') {
-			$titleName = $locations->get($id)->getName();
+      $location = $locations->get($id);
+			$titleName = $location->getName();
+
+      $headerPath = $location->getHeaderPath(); //Also used by head.php
+      $name = $titleName; //Used by head.php
+      include 'app/inc/head.php';
+      include 'app/inc/left-sidebar.php';
+
 			$type_php = 'location.php';
         	$sql =<<<SQL
 SELECT id, user_id, location_id, replyTo, isPending, UNIX_TIMESTAMP(created_at), deleted, comment from mbira_location_comments
 where location_id=?
 SQL;
 		} else if ($type == 'area') {
-			$titleName = $areas->get($id)->getName();
+      $area = $areas->get($id);
+			$titleName = $area->getName();
+
+      $headerPath = $area->getHeaderPath(); //Also used by head.php
+      $name = $titleName; //Used by head.php
+      include 'app/inc/head.php';
+      include 'app/inc/left-sidebar.php';
+
 			$type_php = 'area.php';
         	$sql =<<<SQL
 SELECT id, user_id, area_id, replyTo, isPending, UNIX_TIMESTAMP(created_at), deleted, comment from mbira_area_comments
@@ -189,7 +201,7 @@ SQL;
 			<!-- single conversation -->
 	<?php
 		$html_final = "";
-		for ($i=0; $i < count($comments); $i++) { 
+		for ($i=0; $i < count($comments); $i++) {
 			if ($comments[$i]['pending'] != 'yes') {
 			$html = <<<HTMLL
 				<div class="single-convo">

@@ -1,7 +1,5 @@
 <?php
 	include 'lib/site.php';
-	include 'app/inc/head.php';
-	include 'app/inc/left-sidebar.php';
 
 	$id = $_GET['id'];
 	$exploration = $explorations->get($id);
@@ -13,6 +11,9 @@
 	}
 
 	$headerPath = $exploration->getHeaderPath();
+	$name = $exploration->getName();
+  include 'app/inc/head.php';
+	include 'app/inc/left-sidebar.php';
 ?>
 
 <div class="main">

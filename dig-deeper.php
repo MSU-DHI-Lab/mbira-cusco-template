@@ -1,16 +1,19 @@
 <?php
-	ob_start();		 // ensures anything dumped out will be caught
-  
+	ob_start();
+
 	include 'lib/site.php';
+
+  if(isset($_GET['id'])) {
+  	$id = $_GET['id'];
+  	$location = $locations->get($id);
+  }else {
+  	header('Location: ./index.php'); 		///< go to homepage if the id is unknown
+  }
+
+  $headerPath = $location->getHeaderPath(); //Also used by head.php
+  $name = $location->getName(); //Used by head.php
 	include 'app/inc/head.php';
 	include 'app/inc/left-sidebar.php';
-
-	if(isset($_GET['id'])) {
-		$id = $_GET['id'];
-		$location = $locations->get($id);
-	}else {
-		header('Location: ./index.php'); 		///< go to homepage if the id is unknown
-	}
 ?>
 
 <div class="main">

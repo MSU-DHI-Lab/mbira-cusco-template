@@ -1,8 +1,8 @@
 <?php
 	ob_start();		 // ensures anything dumped out will be caught
 
-	include 'app/inc/head.php';
 	include 'lib/site.php';
+
 
 	if(isset($_GET['id'])) {
 		$id = $_GET['id'];
@@ -13,8 +13,10 @@
 
 	$exhibit = $areas->getExhibitID($id);
 	$exhibitId = $exhibit[0];
-	$headerPath = $area->getHeaderPath();
+	$headerPath = $area->getHeaderPath(); //Also used by head.php
+  $name = $area->getName(); //Used by head.php
 
+  include 'app/inc/head.php';
 ?>
 
 

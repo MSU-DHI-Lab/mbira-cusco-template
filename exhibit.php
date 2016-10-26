@@ -2,8 +2,6 @@
 	ob_start();
 
 	include 'lib/site.php';
-	include 'app/inc/head.php';
-	include 'app/inc/left-sidebar.php';
 
 	if(isset($_GET['id'])) {
 		$id = $_GET['id'];
@@ -14,6 +12,11 @@
 	}else {
 		header('Location: ./exhibits.php');
 	}
+
+  $headerPath = $exhibit->getHeaderPath(); //Also used by head.php
+  $name = $exhibit->getName(); //Used by head.php
+	include 'app/inc/head.php';
+  include 'app/inc/left-sidebar.php';
 
 ?>
 

@@ -13,7 +13,7 @@ $controller = new ValidationController($site);
 $user = $controller->validate($_GET['v']);
 
 if ($user == "Invalid validator") {
-  $_SESSION['login-error'] = $msg;
+  $_SESSION['login-error'] = $user;
   header("location: login.php");
   exit;
 } else {
