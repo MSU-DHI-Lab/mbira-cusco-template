@@ -121,7 +121,7 @@
 			<p><span>Message</span></p>
 		</a>
 
-		<a href="mailto:?subject=Explore%20<?php echo $name ?>%21&body=<?php echo urlencode("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]")?>" class="nav-item social">
+		<a href="mailto:?subject=Explore%20<?php if (isset($name)) {echo addslashes($name);} else { echo addslashes($projects->get($projectID)->getName()); } ?>%21&body=<?php echo urlencode("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]")?>" class="nav-item social">
 			<img src="app/styles/icons/temp/mail.svg" />
 			<p><span>Mail</span></p>
 		</a>
@@ -145,7 +145,7 @@
 			<p><span>Twitter</span></p>
 		</a>
 
-        <a href="#" class="nav-item social" onclick="javascript:window.open('https://plus.google.com/share?url=' + url, 'Explore <?php if (isset($name)) {echo addslashes($name);} else { echo addslashes($projects->get($projectID)->getName()); } ?>!',
+        <a href="#" class="nav-item social" onclick="javascript:window.open('https://plus.google.com/share?url=' + url, '',
             'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=700,width=600');return false;">
             <img src="app/styles/icons/temp/google-plus.svg" width="15" height="16" alt="Share on Google+" />
             <p><span>Google+</span></p>
