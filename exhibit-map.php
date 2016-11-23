@@ -8,6 +8,7 @@
 	$locationID = $exhibits->getLocationID($exhibitID); 	/// Get associated locations' id list
 	$areaID = $exhibits->getAreaID($exhibitID); 			/// Get associated areas' id list
 
+
 	$locationList = array();
 	$areaList = array();
 
@@ -17,6 +18,7 @@
 	}
 	if (!empty($locationID)){
 		foreach ($locationID as $id){
+
 			$location = $locations->get($id);
 			array_push($locationList,$location); 		/// Get locations and put them in the array
 		}
@@ -65,12 +67,14 @@ function trim_description($description) {
 }
 
 $locationScript = "";
+$groupScriptText = "var group = new L.featureGroup([";
 $locationCounter = 1;			///< The index of location markers
 $textCounter = 1;				///< The index of text script, share between locations and areas
 $latitudeArray = [];			///< Holds all of latitudes of areas and exhibits
 $longitudeArray = [];			///< Holds all of longitudes of areas and exhibits
 
 foreach ($locationList as $location) {
+
 	$latitude = $location->getLatitude();
 	$longitude = $location->getLongitude();
 
@@ -84,8 +88,10 @@ foreach ($locationList as $location) {
 	$locationScript .= "var marker".$locationCounter." = L.marker([".$latitude.", ".$longitude."], {icon: marker}).addTo(exhibitMap);";
 	$locationScript .= "var m".$textCounter."Txt = '<h2>".$title."</h2> <p>".$description."</p> <a href=\"location.php?id=".$id."\"><div class=\"view-location\"><p>View Location</p> <img src=\"app/styles/icons/arrow-right.svg\" class=\"icon arrow-right\"/> </div></a>';";
 	$locationScript .= "marker".$locationCounter.".bindPopup(m".$locationCounter."Txt);";
+	$groupScriptText .= "marker".$locationCounter.", ";
 	$locationCounter ++;
 	$textCounter ++;
+
 }
 
 $areaScript = "";
@@ -107,8 +113,10 @@ foreach ($areaList as $area) {
 	$areaScript .= "var area".$areaCounter." = L.".$shape."(".$coordinates.", {color: '#36464E',fillColor: '#263238',fillOpacity: 0.5}).addTo(exhibitMap);";
 	$areaScript .= "var m".$textCounter."Txt = '<h2>".$title."</h2> <p>".$description."</p> <a href=\"area.php?id=".$id."\"><div class=\"view-location\"> <p>View Area</p> <img src=\"app/styles/icons/arrow-right.svg\" class=\"icon arrow-right\"/> </div></a>';";
 	$areaScript .= "area".$areaCounter.".bindPopup(m".$textCounter."Txt);";
+	$groupScriptText .= "area".$areaCounter.", ";
 	$areaCounter ++;
 	$textCounter ++;
+	
 }
 
 $latitude = (max($latitudeArray) + min($latitudeArray)) / 2;  			///< The center latitude of the map view
@@ -121,16 +129,17 @@ $diff = max($diffLatitude, $diffLongitude); 							///< The distance of farthest
 
 $zoomLevel = 12 - ceil($diff / 4); 										///< Calculate zoom level so that all locations&areas are displayed on map
 
-var_dump($zoomLevel);
-if($zoomLevel < 2) { 					/// Set minimum zoom level
-	$zoomLevel = 4;
-}
+// var_dump($zoomLevel);
+// if($zoomLevel < 2) { 					/// Set minimum zoom level
+// 	$zoomLevel = 4;
+// }
+$groupScriptText = substr($groupScriptText, 0, -2);
 
 echo "<script>
 // initialize map for exhibit
 // will need multiples instances of this file for multiple maps
 
-var exhibitMap = L.map('exhibit-map').setView([".$latitude.", ".$longitude."], ".$zoomLevel.");
+var exhibitMap = L.map('exhibit-map');
 
 // sets location of map
 // please replace with MATRIX mapbox account
@@ -148,7 +157,7 @@ exhibitMap.on('popupopen', function(centerMarker) {
     exhibitMap.setView(exhibitMap.unproject(cM));
 });
 
-".$locationScript.$areaScript. "
+".$locationScript.$areaScript.$groupScriptText."]); exhibitMap.fitBounds(group.getBounds());
 
 </script>";
 ?>
