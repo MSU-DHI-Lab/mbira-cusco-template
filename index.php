@@ -44,7 +44,7 @@
 				<p><span>View Explorations</span></p>
 			</a>
 
-			<a href="#" class="nav-item">
+			<a href="all-places.php" class="nav-item">
 				<img src="app/styles/icons/LocationWhite.svg" />
 				<p><span>View All Places</span></p>
 			</a>
@@ -116,7 +116,7 @@
 			<p><span>View Explorations</span></p>
 		</a>
 
-		<a href="#" class="nav-item">
+		<a href="all-places.php" class="nav-item">
 			<img src="app/styles/icons/LocationWhite.svg" />
 			<p><span>View All Places</span></p>
 		</a>
