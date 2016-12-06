@@ -36,11 +36,7 @@
 <!-- multiple instances of this file will need to be created for multiple location maps -->
 <?php
 $title = addslashes($area->getName());
-$des = addslashes($area->getDes());
-$des = trim(preg_replace('/\s\s+/', ' ', $des));
-if (strlen($des) > 140) {
-	$des = substr($des, 0, 140).'...';
-}
+$des = addslashes($area->getshortDes());
 $coordinates = $area->getCoordinates();
 $center = $area->getCenter();
 $latitude = $center[0];
