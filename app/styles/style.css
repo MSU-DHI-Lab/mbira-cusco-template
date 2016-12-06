@@ -20,3 +20,7 @@
 
 /* internal vendor css */
 @import url('vendors/lightbox/lightbox.css');
+
+blockquote {
+  margin: 0;
+}

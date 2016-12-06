@@ -1,4 +1,8 @@
 /* sets single exploration preview image */
+blockquote {
+	margin: 0;
+}
+
 .exploration-img {
 	position: relative;
 	float: left;
