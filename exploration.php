@@ -1,13 +1,26 @@
 <?php
+	ob_start();
 	include 'lib/site.php';
 
 	$id = $_GET['id'];
 	$exploration = $explorations->get($id);
+	if ( empty($exploration) ) {
+		header("location: explorations.php");
+	}
+
 	$stops = $exploration->getStops();
-	$locTitles = [];
-	foreach($stops as $locId) {
-		$location = $locations->get($locId);
-		array_push($locTitles, $location->getName());
+	$placeTitles = [];
+	foreach($stops as $placeId) {
+		$place = null;
+		if (ord($placeId[0]) == ord("A")) {
+			$place = $areas->get(substr($placeId, 1));
+		} else {
+			$place = $locations->get($placeId);
+		}
+
+		if (!empty($place)) { 
+			array_push($placeTitles, $place->getName());
+		}
 	}
 
 	$headerPath = $exploration->getHeaderPath();
@@ -35,7 +48,7 @@
 
 		<ol>
 		<?php
-		foreach($locTitles as $locTitle) {
+		foreach($placeTitles as $locTitle) {
 			echo" <li>$locTitle</li> ";
 		} ?>
 		</ol>
