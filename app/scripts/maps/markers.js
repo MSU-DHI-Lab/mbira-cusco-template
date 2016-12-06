@@ -19,18 +19,23 @@ var exploration = L.icon({
     popupAnchor:  [0, -58] // point from which the popup should open relative to the iconAnchor
 });
 
-var explorationMarker1 = L.icon({
-    iconUrl: 'app/scripts/maps/markers/explorationMapMarker1.png',
+explorationMarkers = []
+
+explorationMarkers.push( L.icon({
+    iconUrl: 'app/scripts/maps/markers/explorationMapMarker1.svg',
 
     iconSize:     [39, 40], // size of the icon
     iconAnchor:   [22, 30], // point of the icon which will correspond to marker's location
     popupAnchor:  [0, -58] // point from which the popup should open relative to the iconAnchor
-});
+}) );
 
-var explorationMarker2 = L.icon({
-    iconUrl: 'app/scripts/maps/markers/explorationMapMarker2.png',
+for (var i = 2; i < 21; i++) {
+    explorationMarkers.push( L.icon({
+        iconUrl: 'app/scripts/maps/markers/explorationMapMarker'+i+'.svg',
 
-    iconSize:     [24, 24], // size of the icon
-    iconAnchor:   [12, 15], // point of the icon which will correspond to marker's location
-    popupAnchor:  [0, -58] // point from which the popup should open relative to the iconAnchor
-});
+        iconSize:     [24, 24], // size of the icon
+        iconAnchor:   [12, 15], // point of the icon which will correspond to marker's location
+        popupAnchor:  [0, -58] // point from which the popup should open relative to the iconAnchor
+    }) );    
+
+}
