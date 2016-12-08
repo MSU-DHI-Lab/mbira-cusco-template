@@ -3,15 +3,7 @@
 
 var exhibitMap = L.map('exhibit-map').setView([42.733966, -84.482862], 15);
 
-// sets location of map
-// please replace with MATRIX mapbox account
-
-L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-    maxZoom: 18,
-    id: 'tommicchi.n5kf5ldi',
-    accessToken: 'pk.eyJ1IjoidG9tbWljY2hpIiwiYSI6IjQ2MDIxMWU1MTI4MjQxZWJiYjUyYmIyNTlhMWQzYjgyIn0.yTGdQTIKSmk97JN6QC-H0A'
-}).addTo(exhibitMap);
+L.tileLayer(tileURL, tileParameters).addTo(.addTo(exhibitMap);
 
 // initialize markers
 
