@@ -18,7 +18,11 @@
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
 		<script src="app/scripts/maps/markers.js"></script>
 		<script src="app/scripts/vendors/remodal_v1.0.7/dist/remodal.min.js"></script>
-        <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script> 
+    <script type="text/javascript">
+      var tileURL = "<?php echo $mapTileURL; ?>";
+      var tileParameters = <?php echo $mapTileParameters; ?>;
+    </script>
 
         <!-- You can use Open Graph tags to customize link previews.
              Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
