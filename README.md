@@ -3,6 +3,8 @@
 # Cusco: An mbira Mobile First Responsive Web Template
 Cusco is a mobile first responsive web template for the mbira platform.
 
+_Currently, all components of the mbira platform (mbira authoring plugin, Halifax web template, and Cusco web template) are in public beta. Any bugs, issues, or questions should be submitted via the appropriate repository on GitHub._
+
 mbira
 =====
 
